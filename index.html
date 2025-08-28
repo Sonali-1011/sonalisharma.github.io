@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sonali Sharma Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-blue ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sonali Sharma</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      
+      <!-- Left Content -->
+      <div class="hero-text">
+        <span class="tagline">Welcome to my portfolio</span>
+        <h1>I'm <span class="highlight">Sonali Sharma</span></h1>
+        <h2><span id="typing-animation"></span><span class="typing-cursor">|</span></h2>
+        <p>I specialize in creating modern, user-focused digital experiences with clean code and stunning designs.</p>
+        
+        <!-- Buttons -->
+        <div class="buttons">
+          <a href="https://github.com/Sonali-1011/" class="btn btn-primary">💻 View My Work</a>
+          <a href="#contact-section" class="btn btn-outline">📩 Hire Me</a>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="hero-image">
+        <div class="img-frame">
+          <img src="images/sona.jpeg.jpeg" alt="Sonali Sharma">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Typing Animation Script -->
+<script>
+  const typingAnimationElement = document.getElementById('typing-animation');
+  const typingTexts = [
+    "💻 Web Designer",
+    "⚡ Frontend Developer",
+    "🎨 Graphic Designer"
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let currentText = "";
+  let isDeleting = false;
+
+  function type() {
+    currentText = typingTexts[textIndex];
+
+    if (isDeleting) {
+      typingAnimationElement.textContent = currentText.substring(0, charIndex--);
+    } else {
+      typingAnimationElement.textContent = currentText.substring(0, charIndex++);
+    }
+
+    let typingSpeed = isDeleting ? 100 : 150;
+
+    if (!isDeleting && charIndex === currentText.length) {
+      typingSpeed = 1200; 
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % typingTexts.length;
+      typingSpeed = 500;
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  type();
+</script>
+
+<style>
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+background: linear-gradient(135deg, #1a1a2e, #16213e, #000000);
+ 
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.hero .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Text Content */
+.hero-text {
+  flex: 1;
+  animation: fadeInLeft 1.5s ease forwards;
+  min-width: 300px;
+}
+
+.hero-text .tagline {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #14b8a6;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero-text .highlight {
+  color: #14b8a6;
+}
+
+.hero-text h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.hero-text p {
+  color: #d1d5db;
+  margin: 15px 0 25px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #14b8a6;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0d9488;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border: 2px solid #14b8a6;
+  color: #14b8a6;
+}
+
+.btn-outline:hover {
+  background: #14b8a6;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Image Section - Glassmorphism Style */
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 1.5s ease forwards;
+
+  /* extra space top & bottom */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.img-frame {
+  position: relative;
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+
+  /* Equal width & height (square image frame) */
+  width: 350px;   /* आप इसे बढ़ा सकते हो e.g. 380px, 400px */
+  height: 400px;  /* width जितना ही height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* image square में crop हो जाएगी बिना stretch हुए */
+  border-radius: 15px;
+  display: block;
+}
+
+
+.img-frame:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.img-frame img {
+  border-radius: 15px;
+  width: 100%;
+  display: block;
+}
+
+/* Typing Cursor */
+.typing-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #14b8a6;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .img-frame img {
+    width: 250px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .img-frame {
+    width: 300px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .img-frame {
+    width: 250px;
+    height: 280px;
+  }
+
+  .typing-cursor {
+    display: none; /* Optional: Hide cursor on very small screens */
+  }
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* Overwrite for small devices inside media query */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}
+/* Tablets & smaller laptops */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text {
+    padding: 0 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .img-frame {
+    width: 280px;
+    height: 320px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 15px 0 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 0;
+  }
+
+  .img-frame {
+    width: 220px;
+    height: 260px;
+  }
+
+  .typing-cursor {
+    display: none;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text h2 {
+    font-size: 16px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .img-frame {
+    width: 180px;
+    height: 220px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+
+</style>
+
+
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <div class="container">
+    <div class="row align-items-center flex-wrap">
+
+      <!-- Left: Image + Skills -->
+      <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+        <div class="img-about text-center">
+        <div class="img-about text-center">
+  <img src="images/sona.jpeg.jpeg" alt="Profile Image" class="profile-image-circle">
+</div>
+
+
+
+          <div class="skill-mf text-left px-2">
+            <p class="title-s">Skills</p>
+
+            <span>HTML / CSS</span> <span class="float-right">95%</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 95%;"></div>
+            </div>
+
+            <span>JavaScript</span> <span class="float-right">90%</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+
+            <span>UI/UX Design</span> <span class="float-right">88%</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 88%;"></div>
+            </div>
+
+            <span>Responsive Design</span> <span class="float-right">92%</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 92%;"></div>
+            </div>
+
+            <span>Canva Design</span> <span class="float-right">85%</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: About Text -->
+      <div class="col-lg-7 col-md-6">
+        <div class="heading-section">
+          <h1 class="big">About</h1>
+          <h2 class="mb-4">About Me</h2>
+          <p>
+            With 1.4 years of hands-on experience in web design and graphic design, I specialize in creating visually
+            engaging and user-friendly digital content. Proficient in HTML, CSS, responsive design, and Canva for
+            crafting impactful graphics, social media visuals, and branding materials. Demonstrated ability to deliver
+            creative design solutions, collaborate effectively with teams, and maintain consistency across digital platforms.
+          </p>
+
+          <ul class="about-info mt-4 px-0">
+            <li class="d-flex"><span>Profile:</span> <span>Web & Graphic Designer</span></li>
+            <li class="d-flex"><span>Domain:</span> <span>Web Design, Visual Content, Social Media Graphics</span></li>
+            <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+            <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+            <li class="d-flex"><span>Design Tools:</span> <span>Canva (Posts, Cards, Banners)</span></li>
+            <li class="d-flex"><span>Web Skills:</span> <span>HTML, CSS, JavaScript, Bootstrap, WordPress, PHP (Basic)</span></li>
+            <li class="d-flex"><span>Interest:</span> <span>Creative Design, Social Media Content, UI Inspiration</span></li>
+          </ul>
+
+          <div class="counter-wrap mt-4">
+            <p class="mb-2">
+              <span class="number">30</span>+ Projects completed
+            </p>
+            <a href="https://www.linkedin.com/in/sonali-sharma-620965209"
+              class="btn-linkedin" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+	
+  <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+  <div class="row justify-content-center pb-5">
+    <div class="col-md-10 heading-section text-center ftco-animate">
+      
+      <h1 class="big big-2">Resume</h1>
+      <h2 class="mb-4">Resume</h2>
+      
+      <p class="resume-text">
+        Creative Web & Graphic Designer with 1.4 years of experience in crafting responsive websites and eye-catching visual content. Skilled in HTML, CSS, JavaScript, Bootstrap, WordPress, and Canva for designing social media posts, banners, and branding materials. Passionate about clean design, user-friendly interfaces, and delivering impactful digital experiences.
+      </p>
+      
+    </div>
+    <!-- <div class="row justify-content-center mt-5"> -->
+  <div class="col-md-6 text-center ftco-animate">
+    <p>
+      <a href="assets/resume.pdf" class="btn-download" download>
+        Download CV
+      </a>
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+
+		<section id="resume" class="resume-section">
+  <div class="container">
+
+    <!-- Experience -->
+    <div class="section-title">
+      <h2>Experience</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="resume-card">
+          <span class="date">2024-2025</span>
+          <h3>Web Designer</h3>
+          <span class="company">Merkle</span>
+          <p class="mt-3">
+            Web Bridge Services is a digital solutions company focused on creating high-impact web experiences.
+          </p>
+          <ul>
+            <li>Designed web assets & marketing materials with Canva ensuring brand consistency.</li>
+            <li>Built responsive landing pages with HTML, CSS, JS, Bootstrap improving conversions by 20% MoM.</li>
+            <li>Collaborated with marketing & dev teams to run A/B tests and refine UX.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-card">
+          <span class="date">Internship (2024)</span>
+          <h3>Web Design & Development Intern</h3>
+          <span class="company">Internship</span>
+          <p class="mt-3">
+            Completed a 6-month internship focused on front-end web development.
+          </p>
+          <ul>
+            <li>Built responsive websites with HTML, CSS, JavaScript, Bootstrap.</li>
+            <li>Worked on real-world projects to design user-friendly interfaces.</li>
+            <li>Learned modern design principles & web standards.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section-title mt-5">
+      <h2>Education</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="resume-card">
+          <span class="date">2018-2021</span>
+          <h3>B.Sc. Computer Science</h3>
+          <span class="company">Sri Dev Suman Uttarakhand University</span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-card">
+          <span class="date">2022-2024</span>
+          <h3>MCA</h3>
+          <span class="company">Gurukul Kangri University Haridwar</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://sonali-1011.github.io/Analog/" class="block-20 zoom-effect" style="background-image: url('images/OIP.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://sonali-1011.github.io/Analog/">Analog clock</a></h3>
+                <p>A real-time analog clock built with HTML, CSS, and JavaScript using the Date API to show live time with smooth hand movements.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://sonali-1011.github.io/landing-page/" class="block-20 zoom-effect" style="background-image: url('images/bg1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://sonali-1011.github.io/landing-page/">Innovative tech solutions for a smarter tomorrow.</a></h3>
+                <p>We design and develop next-gen digital solutions.
+From AI to AR/VR, we bring ideas to life.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://indianfreebird.com/" class="block-20 zoom-effect" style="background-image: url('images/chardham.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://indianfreebird.com/">Journey Chardham yatra</a></h3>
+                <p>We Create Journeys, You Make Memories, responsive UI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://sonali-1011.github.io/news/" class="block-20 zoom-effect" style="background-image: url('images/OIF\ \(1\).jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://sonali-1011.github.io/news/">Live India news with API</a></h3>
+				  <p>Live India news with API, animated ticker, and smooth headline display.
+</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://sonali-1011.github.io/smart-calculator/" class="block-20 zoom-effect" style="background-image: url('images/calculator.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://sonali-1011.github.io/smart-calculator/">Animated smart calculator using API.</a></h3>
+				  <p>API-based smart calculator with animated background and interactive buttons.</p>
+				</div>
+			  </div>
+			</div>
+      			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://poojasankalp.com/" class="block-20 zoom-effect" style="background-image: url('images/img1.avif');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://poojasankalp.com/">Welcome to Pooja Sankalp.</a></h3>
+				  <p>Pooja Sankalp offers spiritual services to deepen your connection with the divine..</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+  <!-- Years of Experience -->
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" data-number="1.4">0</strong>
+        <span>Years of Experience</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Completed Projects -->
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" data-number="10">0</strong>
+        <span>Projects Completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Tools Mastered -->
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" data-number="5">0</strong>
+        <span>Design Tools Mastered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Web Technologies -->
+  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text">
+        <strong class="number" data-number="7">0</strong>
+        <span>Web Technologies Used</span>
+      </div>
+    </div>
+  </div>
+    </div>
+      </div>
+
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						    <a href="https://github.com/Sonali-1011/" class="btn-portfolio github-btn" target="_blank">
+  <i class="fab fa-github"></i> GitHub
+</a>
+
+						</div>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Haridwar, Uttarakhand</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 7895045749</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">sonalihdr123@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sonali-sharma-620965209?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/SonaliS06275206?t=x1fdt4gmqE1ku6pqnXQzkQ&s=09"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/share/173DpRTevQ/"><span class="icon-facebook"></span></a></li>
+				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/https://www.instagram.com/sonalisharma10_?utm_source=ig_web_button_share_sheet&igsh=Z2xkbHl3bWs2OHc2/"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 text-center">
+
+        <p>
+          &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | 
+          Designed & developed with <i class="icon-heart color-danger" aria-hidden="true"></i> by 
+          <strong>Sonali Sharma</strong>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

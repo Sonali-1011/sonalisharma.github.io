@@ -10274,8 +10274,6 @@ textarea.form-control {
     padding: 0 15px;
   }
 
-
-
   /* Image styling */
   .img-about img {
     width: 100%;
@@ -10495,5 +10493,6 @@ textarea.form-control {
   }
 }
 .resume-text {
-text-align: justify;
+  text-align: justify;
+  color: white;
 }

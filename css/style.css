@@ -10274,6 +10274,8 @@ textarea.form-control {
     padding: 0 15px;
   }
 
+
+
   /* Image styling */
   .img-about img {
     width: 100%;
@@ -10305,7 +10307,7 @@ textarea.form-control {
     padding: 0;
   }
 
-  .about-info li {
+  /* .about-info li {
     flex-direction: column;
     align-items: flex-start;
     font-size: 14px;
@@ -10315,7 +10317,7 @@ textarea.form-control {
   .about-info li span:first-child {
     font-weight: 600;
     margin-bottom: 4px;
-  }
+  } */
 
   /* Skills section */
   .skill-mf {
@@ -10440,4 +10442,58 @@ textarea.form-control {
   background-color: #333;
   transform: scale(1.05);
   color: #14b8a6; /* highlight on hover */
+}
+/* General text styling */
+.about-text {
+  color: white;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* About info list */
+.about-info li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.about-info li span:first-child {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+/* LinkedIn button */
+.btn-linkedin {
+  display: inline-block;
+  background: #0077b5;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-linkedin:hover {
+  background: #005983;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heading-section {
+    text-align: center;
+  }
+  .about-info li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-info li span:first-child {
+    min-width: auto;
+    margin-bottom: 4px;
+  }
+}
+.resume-text {
+text-align: justify;
 }
